@@ -11,7 +11,10 @@ class Login extends CI_Controller
 
   function index()
   {
+    $data['title'] = "Garuda Indonesia - Login";
+    $this->load->view('head');
     $this->load->view('View_login');
+    $this->load->view('down');
   }
 
   function auth()
