@@ -18,7 +18,7 @@ class Login extends CI_Controller
   {
     $username = $this->input->post('username');
     $password = md5($this->input->post('password'));
-    $validate = $this->Model_login->validate($username, $password);
+    $validate = $this->Model_Login->validate($username, $password);
     if ($validate->num_rows() > 0) {
       $data     = $validate->row_array();
       $name     = $data['nama_user'];
