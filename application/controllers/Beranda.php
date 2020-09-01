@@ -15,8 +15,8 @@ class Beranda extends CI_Controller
 	public function index()
 	{
 		$data['title'] = "Garuda Indonesia - Home";
-		$this->load->view('head');
-		$this->load->view('navbar', $data);
+		$this->load->view('head', $data);
+		$this->load->view('navbar');
 		$this->load->view('tampil_home');
 		$this->load->view('down');
 	}

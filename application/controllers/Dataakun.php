@@ -18,8 +18,8 @@ class Dataakun extends CI_Controller
   {
     if ($this->session->userdata('level') !== 'user') {
       $data['title'] = "Garuda Indonesia - Data Akun";
-      $this->load->view('akun/view_akun', $data);
-      $this->load->view('akun/form_addakun');
+      $this->load->view('akun/View_Akun', $data);
+      $this->load->view('akun/Form_addakun');
     } else {
       redirect('Error403');
     }
@@ -28,8 +28,8 @@ class Dataakun extends CI_Controller
   public function akun_user()
   {
     $data['title'] = "Garuda Indonesia - Data Akun";
-    $this->load->view('akun/view_user', $data);
-    $this->load->view('akun/form_addakun');
+    $this->load->view('akun/View_Akun', $data);
+    $this->load->view('akun/Form_addakun');
   }
 
   public function Akun()
@@ -91,7 +91,7 @@ class Dataakun extends CI_Controller
       $id = $this->input->post('id');
 
       $data['dataperakun'] = $this->Model_Akun->dataakunedit($id);
-      $this->load->view('akun/form_editakun', $data);
+      $this->load->view('akun/Form_editakun', $data);
     } else {
       redirect('Error403');
     }
@@ -121,7 +121,7 @@ class Dataakun extends CI_Controller
       $id = $this->input->post('id');
 
       $data['dataperakun'] = $this->Model_Akun->dataakunedit($id);
-      $this->load->view('akun/form_editpassword', $data);
+      $this->load->view('akun/Form_editpassword', $data);
     } else {
       redirect('Error403');
     }
